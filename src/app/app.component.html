@@ -1,0 +1,38 @@
+<!--
+
+<h1>my name is <mark>{{user.firstName}}</mark> {{user.lastName}}</h1>
+
+<p>Seattle Dojo's Grand Opening - {{ date | date:'fullDate' }}</p>
+<p>Burbank Dojo's Grand Opening - {{ date | date:'medium' }}</p>
+<p>Today's date is: {{ date | date: 'shortDate'}}</p>
+<p>Current time is: <sub><mark>{{ date | date: 'shortTime'}}</mark> </sub></p>
+<p> First Image take by <sub>NASA'S</sub> Hubble Space Telescope was on My 20, 1990</p> -->
+
+
+<h1>Currency from <sub>all</sub> over the <mark>WORLD!</mark></h1>
+
+
+<h1>this is a test</h1>
+<p>US dollar --> {{ USD | currency : 'USD' : true}}</p>
+<p>Euro --> {{ UER | currency : 'UER' : true}}</p>
+<p>British Pound --> {{ GBP | currency : 'GBP' : true}}</p>
+<p>Indian Rupee --> {{ INR | currency : 'INR' : true}}</p>
+<p>Chinese Yuan Renminbi --> {{ CNY | currency : 'CNY' : true}}</p>
+
+
+<h1> Attribute <mark>Directives</mark></h1>
+
+  <h2>Using the element's class property:</h2>
+  <h4 [class.red]='true' >This header will attain the red class because it's value is true.</h4>
+  <h4 [class.red]='false' >This header will not attain the red class because it's value is false.</h4>
+  <h4 [class.red]='bool' >This header will attain the red class because we set the bool variable to true in our component's class.</h4>
+  <h2>Using the element's class property bound to an object to use multiple classes.</h2>
+  <h4 [ngClass]="{red: true, blueText: true}">
+  This element will have the red and blueText class since both are set to true.
+  </h4>
+  <h2>Using the element's style property:</h2>
+    <h4 [style.background-color]='red'>This header will attain a red background. </h4>
+
+<!-- example of event binding/adding event listeners, such as click event -->
+    <button (click)='logNum()'>Log the num value</button>
+    <button (click)='num = num + 1'>Increment num</button>
